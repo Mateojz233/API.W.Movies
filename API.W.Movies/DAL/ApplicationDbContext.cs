@@ -1,0 +1,19 @@
+﻿using API.W.Movies.DAL.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace API.W.Movies.DAL
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+
+        }
+
+        //crear el DbSet de las entidades
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+    }
+}
+    
+ 
